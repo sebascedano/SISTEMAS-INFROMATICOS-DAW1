@@ -1,0 +1,74 @@
+Ejercicio 1:
+	//ubicarse en el repositorio
+		cd/c/users/EQ4321/git
+
+	//Definir el nombre de usuario
+		git config --global user.name "[Sebastian Cedano]"
+
+	//Definir el correo electronico
+		git config --global user.email "[sebascedano99@gmail.com]"
+
+	//Activar el coloreado de la salida
+ 		git config --global color.ui auto
+
+Ejercicio 2:
+
+	//Crea un repositorio nuevo con el nombre libro
+		git init libro
+
+
+Ejercicio 3:
+	//Comprobar el estado del repositorio.
+		git status
+
+	//Crear un fichero indice.txt con el contenido...
+		echo "Capitulo 1: introduccion a Git">indice.txt
+		echo "Capitulo 2: Flujo de trabajo básico">>
+		echo "Capitulo 3: Repositorios remotos">>
+
+	//Comprobar el estado del repositorio de nuevo
+		git status
+
+	//Añadir el fichero a la zona de intercambio temporal
+		git add indice.txt
+
+	//Volver a comprobar el estado del repositorio
+		git status
+
+Ejercicio 4:
+
+	//Realizar un commit de los últimos cambios con el mensaje "Añadido índice del libro"
+		git commit -m "[Añadido índice del libro.]"
+
+	//Ver estado del repositorio
+		git status
+
+Ejercicio 5:
+
+	//Cambiar el fichero para que contenga lo siguiente:
+	Capitulo 1:Introduccion a Git
+	Capitulo 2: Flujo de trabajo básico
+	Capitulo 3: Gestión de ramas
+	Capitulo 4: Repositorios remotos
+
+		nano indice.txt (Se cambia de manera manual el "gestión de ramas" y se añade el "Capitulo 4: Repositorios remotos".)
+		cat indice.txt (Para comprobar que se han hecho los cambios)
+
+	//Mostrar los cambios con respecto a la última versión guardada en el repositorio.
+		git log
+
+	//Hacer un commit de los cambios con el mensaje "Añadido capítulo 3 sobre gestión de ramas".
+		git add indice.txt
+		git commit --amend -m "Añadido capítulo 3 sobre gestión de ramas"
+
+Ejercicio 6:
+	//Mostrar los cambios con respecto a la última versión guardada en el repositorio.
+		git log
+
+	//Cambiar el mensaje del último commit por "Añadido capitulo 3 sobre gestión de ramas"
+  		git commit -m "[Añadido capìtulo 3 sobre gestion de ramas.]"
+
+	//Mostrar los ultimos cambios en el repositorio
+		git log
+
+
