@@ -1,0 +1,92 @@
+Ejercicios Gestion de ramas
+
+Ejercicio 1
+//Crea la rama bibliografia
+git branch bibliografia
+
+//muestra las ramas
+git branch
+
+Ejercicio 2
+//Crea el fichero capitulos/capitulo4.txt y añadir el texto siguiente "patata"
+mkdir capitulos
+echo "patata">capitulo4.txt
+
+//Añade los cambios a la zona de intercambio temporal
+git add .
+
+//Hacer un commit con el mensaje "Añadido capitulo 4"
+git commit -m "Añadido el capitulo 4"
+
+//mostrar historia del repositorio incluyendo las ramas
+git log --all
+
+Ejercicio 3
+//Cambia a la rama bibliografia
+git checkout bibliografia
+
+//Añadir los cambios a la Z.I.T
+git add bibliografia.txt
+
+//Hacer un commit con el mensaje "Añadida primera referencia bibliográfica"
+git commit -m "Añadida primera referencia bibliografica"
+
+//Mostrar la historia del repositorio incluyendo las ramas
+git log --all
+
+Ejercicio 4
+//Fusionar la rama bibliografia con la rama master
+git checkout master
+
+git merge bibliografia
+
+//mostrar la historia del repositorio incluyendo las ramas
+git log --all
+
+//Eliminar la rama bibliografía
+git branch -d bibliogrfia
+
+//Motrar la historia
+git log --all
+
+Ejercicio 5
+//Crear la rama bibliografia
+git branch bibliografia
+
+//Cambiar a la rama bibliografia
+git checkout bibliografia
+
+//Cambiar el fichero para que contenga referencias
+echo "Scott Chacon and Ben Straub. Pro Git. Apress.">bibliografia.txt
+
+echo "Ryan Hodson. Ry's Git Tutorial. Smashwords (2014)">>bibliografia
+
+//Añadir los cambios a Z.I.T y hacer commit con el mensaje "Añadida nueva referencia bibliografica"
+git add bibliografia.txt
+
+git commit -m "Añadida nueva referencia bibliografica"
+
+//Cambiar a la rama master
+git checkout master
+
+//Cambiar el fichero bibliografia para que contenga la referencia
+echo "Loeliger, J. and McCullough, M. Version control with Git. O'Reilly.">>bibliografia.txt
+
+//Añadir los cambios a Z.I.T y commit con mensaje
+git add bibliografia.txt
+
+git commit -m "Añadida nueva referencia bibliografica"
+
+//Fusionar las ramas bibliografia y master
+git merge bibliografia
+
+//Resolver el conflicto dejando las referencias
+notepad bibliografia.txt (se edita el fichero desde el notepad)
+
+//Añadir los cambios y hacer commit con mensaje
+git add bibliografia.txt
+
+git commit -m "Resulto conflicto de bibliografia"
+
+//mostrar la historia del repositorio
+git log --all
